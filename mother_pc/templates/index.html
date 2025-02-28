@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother PC Control Panel</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+</head>
+<body>
+    <h1>Mother PC - Control Panel</h1>
+    
+    <label for="pc-select">Select Child PC:</label>
+    <select id="pc-select"></select>
+    
+    <button onclick="sendCommand('delete')">Delete File</button>
+    <button onclick="sendCommand('list')">List Files</button>
+    
+    <h2>Logs:</h2>
+    <div id="log"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
